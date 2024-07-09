@@ -1,7 +1,12 @@
-body{
+
+body,html{
     font-family:'Franklin Gothic Medium','Arial Narrow',Arial,Sans-serif;
     background:rgba(0,0,0,0.6) url('image.jpg');
     background-blend-mode:darken;
+    overflow:auto;
+    height:fit-content;
+    margin:0;
+    padding:0;
 }
 .logo{
     width:12%;
@@ -29,9 +34,11 @@ select{
 }
 .content{
     color:#fff;
-    position:absolute;
+    position:relative;
     margin-top:8%;
     margin-left:30%;
+    margin-right:30%;
+    
 }
 .content h1{
     font-size:50px;
@@ -61,4 +68,149 @@ select{
     text-decoration:none;
     height:fit-content;
     
+}
+.features{
+    margin-top:250px;
+    padding:50px 12%;
+    font-size:22px;
+    background-color: black;
+    border-top:6px solid #333;
+
+}
+.row{
+    display:flex;
+    width:100%;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:50px 0;
+    
+    
+}
+.text-col{
+    margin-bottom:20px;
+    flex-basis:50%;
+    color:white;
+}
+.img-col{
+    flex-basis:50%;
+    margin-bottom:20px;
+}
+.img-col img{
+    display:block;
+    width:90%;
+    margin:auto;
+}
+.faq{
+    background-color: black;
+    color:white;
+    padding:10px 12%;
+    text-align:center;
+    font-size:18px;
+    border-top:6px solid #333;
+    
+}
+faq h2{
+    font-weight:400;
+    font-size:40px;
+}
+.accordion{
+    width:100%;
+    max-width:750px;
+   
+}
+.accordion div{
+    margin:0;
+    padding:0;
+}
+.accordion li{
+    list-style:none;
+    width:100%;
+    padding:5px;   
+}
+.accordion li label{
+    display:flex;
+    align-items:center;
+    padding:20px;
+    font-size:18px;
+    font-weight:500;
+    background:#303030;
+    margin-bottom:2px;
+    cursor:pointer;
+    position:relative;
+}
+label::after{
+    content:'+';
+    font-size:34px;
+    position:absolute;
+    right:20px;
+}
+ul{
+    
+    margin:0;
+}
+input[type="radio"]{
+    display:none;
+}
+.accordion .content{
+    background:#303030;
+    text-align:left;
+    padding:0 20px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s,padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height:600px;
+    padding:30px 20px;
+}
+/*footer*/
+.footer{
+padding:50px 15% 10px;
+border-top:6px solid #333;
+color:#777;
+background:black
+}
+.footer h2{
+    font-size:18px;
+    font-weight:400;
+    margin-bottom:30px;
+}
+
+.footer .col{
+    flex-basis:25%;
+    margin-bottom:20px;   
+}
+.footer .col a{
+    display:block;
+    text-decoration:none;
+    color:#777;
+    font-size:14px;
+    margin-bottom:10px;
+}
+.footer .row{
+    align-items:flex-start;
+    padding:10px 0;
+}
+.footer .language-btn{
+    color:#fff;
+    padding:10px 20px;
+    border-radius:3px;
+    background:black;
+}
+.copyright{
+    font-size:14px;
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#777;
+}
+.language{
+    margin-left: 0px;
+}
+.id{
+    margin-left:21%;
+width:58%;
+margin-bottom:50px;
+}
+.p{
+    font-weight:400;
 }
